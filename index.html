@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Старт продаж нового жилого комплекса в Санкт-Петербурге</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .hero {
+            background: url('https://placehold.co/1200x600/2a5298/ffffff?text=Новый+Жилой+Комплекс+в+СПб') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background: #ff5252;
+        }
+        
+        .features {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .features h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature i {
+            font-size: 48px;
+            color: #2a5298;
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            margin-bottom: 15px;
+        }
+        
+        .form-section {
+            padding: 60px 0;
+            background: #f9f9f9;
+            text-align: center;
+        }
+        
+        .form-section h2 {
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .close {
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">ЭлитСтрой</div>
+            <p>Премиальное жилье в Санкт-Петербурге</p>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Старт продаж нового жилого комплекса "Северная Жемчужина"</h1>
+            <p>Эксклюзивные апартаменты с видом на исторический центр Санкт-Петербурга</p>
+            <button class="btn" id="presentationBtn">Получить презентацию</button>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <h2>Преимущества нашего комплекса</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <i>🏛️</i>
+                    <h3>Исторический район</h3>
+                    <p>Расположение в самом сердце Санкт-Петербурга с богатой историей</p>
+                </div>
+                <div class="feature">
+                    <i>🌳</i>
+                    <h3>Зеленые зоны</h3>
+                    <p>Благоустроенные дворы без машин и парковые территории</p>
+                </div>
+                <div class="feature">
+                    <i>🏠</i>
+                    <h3>Авторская архитектура</h3>
+                    <p>Уникальный проект от ведущих европейских архитекторов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="form-section">
+        <div class="container">
+            <h2>Получите полную презентацию ЖК</h2>
+            <div class="form-container">
+                <form id="presentationForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Ваш телефон</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                    </div>
+                    <button type="submit" class="btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 ЭлитСтрой. Все права защищены.</p>
+            <p>Санкт-Петербург, Невский проспект, 100</p>
+        </div>
+    </footer>
+    
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Спасибо за вашу заявку!</h2>
+            <p>Наш менеджер свяжется с вами в ближайшее время для предоставления презентации.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const presentationBtn = document.getElementById('presentationBtn');
+            const presentationForm = document.getElementById('presentationForm');
+            const successModal = document.getElementById('successModal');
+            const closeModal = document.getElementById('closeModal');
+            
+            // Плавная прокрутка к форме
+            presentationBtn.addEventListener('click', function() {
+                document.querySelector('.form-section').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Обработка отправки формы
+            presentationForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const formData = {
+                    name: document.getElementById('name').value,
+                    phone: document.getElementById('phone').value
+                };
+                
+                try {
+                    // Отправка данных на бэкенд
+                    const response = await fetch('http://localhost:8000/submit_contact', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+                    
+                    if (response.ok) {
+                        // Показываем модальное окно при успешной отправке
+                        successModal.style.display = 'flex';
+                        presentationForm.reset();
+                    } else {
+                        alert('Произошла ошибка при отправке формы. Попробуйте еще раз.');
+                    }
+                } catch (error) {
+                    console.error('Ошибка:', error);
+                    alert('Произошла ошибка при отправке формы. Проверьте подключение к интернету.');
+                }
+            });
+            
+            // Закрытие модального окна
+            closeModal.addEventListener('click', function() {
+                successModal.style.display = 'none';
+            });
+            
+            // Закрытие модального окна при клике вне его
+            window.addEventListener('click', function(e) {
+                if (e.target === successModal) {
+                    successModal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
