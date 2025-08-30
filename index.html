@@ -4,42 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ЖК Визионер - Средняя Колтовская 9-11</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-        body { background: #f5f5f5; color: #333; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { background: #1e3c72; color: white; padding: 20px 0; text-align: center; }
-        .hero { 
-            background: url('img/hero-bg.jpg') no-repeat center center/cover;
-            height: 500px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; 
-        }
-        .hero-content { max-width: 800px; padding: 0 20px; }
-        .hero h1 { font-size: 42px; margin-bottom: 20px; }
-        .btn { 
-            background: #ff6b6b; color: white; padding: 15px 30px; border: none; border-radius: 5px; 
-            font-size: 18px; cursor: pointer; transition: background 0.3s; text-decoration: none; display: inline-block; 
-        }
-        .btn:hover { background: #ff5252; }
-        section { padding: 60px 0; }
-        .section-title { text-align: center; margin-bottom: 40px; font-size: 32px; }
-        .features { background: white; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .feature { text-align: center; padding: 20px; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px; }
-        .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }
-        .form-section { background: #f9f9f9; text-align: center; }
-        .form-container { max-width: 500px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; }
-        .form-group { margin-bottom: 20px; text-align: left; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
-        .form-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; }
-        footer { background: #333; color: white; text-align: center; padding: 30px 0; }
-        .modal { 
-            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-            background: rgba(0,0,0,0.7); z-index: 100; align-items: center; justify-content: center; 
-        }
-        .modal-content { background: white; padding: 30px; border-radius: 10px; max-width: 500px; width: 100%; text-align: center; }
-        .close { float: right; font-size: 24px; cursor: pointer; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -59,25 +24,29 @@
     <section class="features">
         <div class="container">
             <h2 class="section-title">Преимущества</h2>
-            <div class="feature-grid">
-                <div class="feature">🏛️ <h3>Исторический район</h3> <p>Петроградская сторона</p></div>
-                <div class="feature">🌳 <h3>Зеленые зоны</h3> <p>Двор без машин</p></div>
-                <div class="feature">🏠 <h3>Авторская архитектура</h3> <p>Евгений Героимов</p></div>
-            </div>
             
-            <div class="gallery">
-                <img src="img/facade.jpg" alt="Фасад ЖК">
-                <img src="img/courtyard.jpg" alt="Двор комплекса">
-                <img src="img/interior.jpg" alt="Интерьер">
+            <!-- ФОТО НА ВЕСЬ ЭКРАН -->
+            <div class="full-screen-gallery">
+                <div class="full-screen-photo">
+                    <img src="img/photo1.jpg" alt="Фото 1">
+                </div>
+                <div class="full-screen-photo">
+                    <img src="img/photo2.jpg" alt="Фото 2">
+                </div>
+                <div class="full-screen-photo">
+                    <img src="img/photo3.jpg" alt="Фото 3">
+                </div>
+                <div class="full-screen-photo">
+                    <img src="img/photo4.jpg" alt="Фото 4">
+                </div>
             </div>
-        </div>
-    </section>
+        </div></section>
     
     <section class="form-section">
         <div class="container">
             <h2 class="section-title">Получить презентацию</h2>
             <div class="form-container">
-<form id="presentationForm">
+                <form id="presentationForm">
                     <div class="form-group">
                         <label for="name">Ваше имя</label>
                         <input type="text" id="name" name="name" required>
@@ -106,40 +75,6 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const presentationBtn = document.getElementById('presentationBtn');
-            const presentationForm = document.getElementById('presentationForm');
-            const successModal = document.getElementById('successModal');
-            const closeModal = document.getElementById('closeModal');
-            
-            presentationBtn.addEventListener('click', function() {
-                document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });
-            });
-            
-            presentationForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                const formData = { name: document.getElementById('name').value, phone: document.getElementById('phone').value };
-                
-                try {
-                    const response = await fetch('http://localhost:8000/submit_contact', {
-                        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData)
-                    });
-                    
-                    if (response.ok) {
-                        successModal.style.display = 'flex';
-                        presentationForm.reset();
-                    } else {
-                        alert('Ошибка при отправке формы.');
-                    }
-                } catch (error) {
-                    alert('Ошибка при отправке формы.');
-                }
-            });
-            
-            closeModal.addEventListener('click', function() { successModal.style.display = 'none'; });
-            window.addEventListener('click', function(e) { if (e.target === successModal) successModal.style.display = 'none'; });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
