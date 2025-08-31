@@ -7,13 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">ЖК "Визионер"</div>
-            <p>Средняя Колтовская 9-11, Санкт-Петербург</p>
+    <!-- Новый хэдер -->
+    <header class="header-new">
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-img">YP</div>
+                <div class="company-name">АН Your Piter</div>
+            </div>
+            <div class="header-contacts">
+                <div class="phone-number">+7(999)-009-07-76</div>
+                <div class="address">Санкт-Петербург, набережная реки мойки 36</div>
+            </div>
         </div>
     </header>
-    
+
+    <!-- Фиксированная кнопка в правом нижнем углу -->
+    <div class="fixed-btn" id="fixedPresentationBtn">
+        Получить презентацию
+    </div>
+
     <section class="hero">
         <div class="hero-content">
             <h1>Старт продаж нового жилого комплекса "Визионер"</h1>
@@ -21,55 +33,63 @@
         </div>
     </section>
     
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Преимущества</h2>
-            
-            <!-- ФОТО НА ВЕСЬ ЭКРАН -->
-            <div class="full-screen-gallery">
-                <div class="full-screen-photo">
-                    <img src="img/photo1.jpg" alt="Фото 1">
-                </div>
-                <div class="full-screen-photo">
-                    <img src="img/photo2.jpg" alt="Фото 2">
-                </div>
-                <div class="full-screen-photo">
-                    <img src="img/photo3.jpg" alt="Фото 3">
-                </div>
-                <div class="full-screen-photo">
-                    <img src="img/photo4.jpg" alt="Фото 4">
-                </div>
-            </div>
-        </div></section>
-    
-    <section class="form-section">
-        <div class="container">
-            <h2 class="section-title">Получить презентацию</h2>
-            <div class="form-container">
-                <form id="presentationForm">
-                    <div class="form-group">
-                        <label for="name">Ваше имя</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Ваш телефон</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
-                    </div>
-                    <button type="submit" class="btn">Отправить заявку</button>
-                </form>
-            </div>
+    <!-- 8 ФОТО НА ВЕСЬ ЭКРАН -->
+    <div class="full-screen-gallery">
+        <div class="full-screen-photo">
+            <img src="img/photo1.jpg" alt="Фото 1">
         </div>
-    </section>
+        <div class="full-screen-photo">
+            <img src="img/photo2.jpg" alt="Фото 2">
+        </div>
+        <div class="full-screen-photo">
+            <img src="img/photo3.jpg" alt="Фото 3">
+        </div>
+        <div class="full-screen-photo">
+            <img src="img/photo4.jpg" alt="Фото 4">
+        </div>
+        <div class="full-screen-photo">
+            <img src="img/photo5.jpg" alt="Фото 5">
+        </div>
+        <div class="full-screen-photo">
+            <img src="img/photo6.jpg" alt="Фото 6">
+        </div>
+        <div class="full-screen-photo">
+            <img src="img/photo7.jpg" alt="Фото 7">
+        </div>
+        <div class="full-screen-photo">
+            <img src="img/photo8.jpg" alt="Фото 8">
+        </div>
+    </div>
     
     <footer>
         <div class="container">
-            <p>© 2023 ЖК "Визионер". Санкт-Петербург, Средняя Колтовская ул., 9-11</p>
+            <p>© 2025 Агенство Недвижимости Your Piter. Санкт-Петербург, набережная реки мойки 36</p>
         </div>
     </footer>
     
-    <div class="modal" id="successModal">
+    <!-- Модальное окно для формы -->
+    <div class="modal" id="formModal">
         <div class="modal-content">
             <span class="close" id="closeModal">×</span>
+            <h2>Получить презентацию</h2>
+            <form id="presentationForm">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Ваш телефон</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                </div>
+                <button type="submit" class="btn">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно успеха -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <span class="close" id="closeSuccessModal">×</span>
             <h2>Спасибо за вашу заявку!</h2>
             <p>Наш менеджер свяжется с вами в ближайшее время.</p>
         </div>
