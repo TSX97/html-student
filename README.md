@@ -15,9 +15,11 @@ Backend Stack:
 	SQLite3
 
 Dev Tools Stack:
+
 	Git
 	#Docker
 	
 API System: 
+
 	REST
 	
