@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/tsx/Code/projects/html-student/scripts/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

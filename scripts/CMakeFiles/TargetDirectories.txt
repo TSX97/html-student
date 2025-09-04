@@ -1,0 +1,3 @@
+/home/tsx/Code/projects/html-student/scripts/CMakeFiles/script.dir
+/home/tsx/Code/projects/html-student/scripts/CMakeFiles/edit_cache.dir
+/home/tsx/Code/projects/html-student/scripts/CMakeFiles/rebuild_cache.dir
