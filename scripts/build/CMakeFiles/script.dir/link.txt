@@ -1,1 +1,1 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/script.dir/link.d CMakeFiles/script.dir/main.cpp.o -o script
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/script.dir/link.d CMakeFiles/script.dir/main.cpp.o -o script  my_math_lib/libmy_math_lib.a

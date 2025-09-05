@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/tsx/Code/projects/html-student/scripts/my_math_lib
+CXX_INCLUDES = -I/home/tsx/Code/projects/html-student/scripts/math_utils
 
 CXX_FLAGS = 
 

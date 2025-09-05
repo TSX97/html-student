@@ -87,21 +87,21 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tsx/Code/projects/html-student/scripts/build/CMakeFiles /home/tsx/Code/projects/html-student/scripts/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/tsx/Code/projects/html-student/scripts/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tsx/Code/projects/html-student/scripts/build/CMakeFiles /home/tsx/Code/projects/html-student/scripts/build/my_math_lib//CMakeFiles/progress.marks
+	cd /home/tsx/Code/projects/html-student/scripts/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_math_lib/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tsx/Code/projects/html-student/scripts/build/CMakeFiles 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tsx/Code/projects/html-student/scripts/build/CMakeFiles /home/tsx/Code/projects/html-student/scripts/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
+	cd /home/tsx/Code/projects/html-student/scripts/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tsx/Code/projects/html-student/scripts/build/CMakeFiles /home/tsx/Code/projects/html-student/scripts/build/my_math_lib//CMakeFiles/progress.marks
+	cd /home/tsx/Code/projects/html-student/scripts/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_math_lib/codegen
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tsx/Code/projects/html-student/scripts/build/CMakeFiles 0
 .PHONY : codegen
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/tsx/Code/projects/html-student/scripts/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_math_lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -110,68 +110,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/tsx/Code/projects/html-student/scripts/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_math_lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/tsx/Code/projects/html-student/scripts/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_math_lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tsx/Code/projects/html-student/scripts/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named script
+# Convenience name for target.
+my_math_lib/CMakeFiles/my_math_lib.dir/rule:
+	cd /home/tsx/Code/projects/html-student/scripts/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_math_lib/CMakeFiles/my_math_lib.dir/rule
+.PHONY : my_math_lib/CMakeFiles/my_math_lib.dir/rule
 
-# Build rule for target.
-script: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 script
-.PHONY : script
-
-# fast build rule for target.
-script/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/script.dir/build.make CMakeFiles/script.dir/build
-.PHONY : script/fast
-
-#=============================================================================
-# Target rules for targets named my_math_lib
-
-# Build rule for target.
-my_math_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_math_lib
+# Convenience name for target.
+my_math_lib: my_math_lib/CMakeFiles/my_math_lib.dir/rule
 .PHONY : my_math_lib
 
 # fast build rule for target.
 my_math_lib/fast:
-	$(MAKE) $(MAKESILENT) -f my_math_lib/CMakeFiles/my_math_lib.dir/build.make my_math_lib/CMakeFiles/my_math_lib.dir/build
+	cd /home/tsx/Code/projects/html-student/scripts/build && $(MAKE) $(MAKESILENT) -f my_math_lib/CMakeFiles/my_math_lib.dir/build.make my_math_lib/CMakeFiles/my_math_lib.dir/build
 .PHONY : my_math_lib/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+my_math.o: my_math.cpp.o
+.PHONY : my_math.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/script.dir/build.make CMakeFiles/script.dir/main.cpp.o
-.PHONY : main.cpp.o
+my_math.cpp.o:
+	cd /home/tsx/Code/projects/html-student/scripts/build && $(MAKE) $(MAKESILENT) -f my_math_lib/CMakeFiles/my_math_lib.dir/build.make my_math_lib/CMakeFiles/my_math_lib.dir/my_math.cpp.o
+.PHONY : my_math.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+my_math.i: my_math.cpp.i
+.PHONY : my_math.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/script.dir/build.make CMakeFiles/script.dir/main.cpp.i
-.PHONY : main.cpp.i
+my_math.cpp.i:
+	cd /home/tsx/Code/projects/html-student/scripts/build && $(MAKE) $(MAKESILENT) -f my_math_lib/CMakeFiles/my_math_lib.dir/build.make my_math_lib/CMakeFiles/my_math_lib.dir/my_math.cpp.i
+.PHONY : my_math.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+my_math.s: my_math.cpp.s
+.PHONY : my_math.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/script.dir/build.make CMakeFiles/script.dir/main.cpp.s
-.PHONY : main.cpp.s
+my_math.cpp.s:
+	cd /home/tsx/Code/projects/html-student/scripts/build && $(MAKE) $(MAKESILENT) -f my_math_lib/CMakeFiles/my_math_lib.dir/build.make my_math_lib/CMakeFiles/my_math_lib.dir/my_math.cpp.s
+.PHONY : my_math.cpp.s
 
 # Help Target
 help:
@@ -183,10 +171,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... my_math_lib"
-	@echo "... script"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... my_math.o"
+	@echo "... my_math.i"
+	@echo "... my_math.s"
 .PHONY : help
 
 
@@ -198,6 +185,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tsx/Code/projects/html-student/scripts/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,7 +1,8 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/tsx/Code/projects/html-student/scripts/build/cmake_install.cmake"
+		"/home/tsx/Code/projects/html-student/scripts/build/cmake_install.cmake",
+		"/home/tsx/Code/projects/html-student/scripts/build/my_math_lib/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

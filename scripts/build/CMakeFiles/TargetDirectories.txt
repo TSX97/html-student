@@ -1,3 +1,6 @@
 /home/tsx/Code/projects/html-student/scripts/build/CMakeFiles/script.dir
 /home/tsx/Code/projects/html-student/scripts/build/CMakeFiles/edit_cache.dir
 /home/tsx/Code/projects/html-student/scripts/build/CMakeFiles/rebuild_cache.dir
+/home/tsx/Code/projects/html-student/scripts/build/my_math_lib/CMakeFiles/my_math_lib.dir
+/home/tsx/Code/projects/html-student/scripts/build/my_math_lib/CMakeFiles/edit_cache.dir
+/home/tsx/Code/projects/html-student/scripts/build/my_math_lib/CMakeFiles/rebuild_cache.dir

@@ -96,6 +96,7 @@ script_EXTERNAL_OBJECTS =
 script: CMakeFiles/script.dir/main.cpp.o
 script: CMakeFiles/script.dir/build.make
 script: CMakeFiles/script.dir/compiler_depend.ts
+script: my_math_lib/libmy_math_lib.a
 script: CMakeFiles/script.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tsx/Code/projects/html-student/scripts/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable script"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/script.dir/link.txt --verbose=$(VERBOSE)
