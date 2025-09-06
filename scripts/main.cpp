@@ -1,13 +1,15 @@
 #include <iostream>
+#include <iomanip>
 #include "my_math.h"
 
 using namespace std;
 
 int main(){
 
-	cout << "My Script <3" << endl;
-	cout << "5 + 7 = " << math::add(5, 7) << endl;
-	cout << "14 - 9 = " << math::sub(14, 9) << endl;
+	cout << fixed << setprecision(16);
 
+	for(int n = 0; n < 20; n++){
+		cout << n << "! / !" << n << " = " << math::get_eyler(n) << endl;
+	}
 	return 0;
 }
